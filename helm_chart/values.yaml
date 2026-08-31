@@ -1,0 +1,19 @@
+# This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+api:
+  containerPath: "registry.example.com/example-org/ai-code-reviewer"
+  containerLabel: "0.1.0"
+  containerName: ai-code-reviewer
+  minReplicaCount: 2
+  maxReplicaCount: 5
+  port: 5002
+  webpath: ai-code-reviewer
+  portName: http
+  appLabel: ai-code-reviewer
+
+imagePullSecrets: []
+
+ingress:
+  enabled: false
+  className: nginx
+  host: reviewer.example.com
+  tlsSecretName: reviewer-example-tls

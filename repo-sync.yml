@@ -1,0 +1,4 @@
+# Repository-to-action map for the configured GitHub App.
+# Replace these examples with repositories in your organization.
+example-api: add
+example-web: add

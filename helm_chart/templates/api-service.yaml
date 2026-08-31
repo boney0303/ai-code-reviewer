@@ -1,0 +1,22 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    releaseName: {{ .Release.Name }}
+    app: {{ .Values.api.appLabel }}
+spec:
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: {{ .Values.api.port }}
+    protocol: TCP
+    targetPort: {{ .Values.api.port }}
+    name: {{ .Values.api.portName }}
+  selector:
+    app: {{ .Release.Name }}
+  sessionAffinity: None
+  type: ClusterIP
+  

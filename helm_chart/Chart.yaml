@@ -1,0 +1,15 @@
+apiVersion: v2
+name: ai-code-reviewer
+description: A Helm chart for an AI-powered pull request review service
+
+type: application
+
+#Chart Version
+version: 1.0.0
+
+#Application Version
+appVersion: "1.1.0"
+
+maintainers:
+- email: platform-team@example.com
+  name: platform-team
